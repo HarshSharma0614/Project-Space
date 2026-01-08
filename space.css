@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+  height: 200vh;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#scene {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  perspective: 800px;
+}
+
+/* GALAXY */
+#galaxy {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #444, black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateGalaxy 60s linear infinite;
+}
+
+#galaxy h1 {
+  font-size: 4rem;
+  transform: translateZ(100px);
+}
+
+@keyframes rotateGalaxy {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* SOLAR SYSTEM */
+#solar-system {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.sun {
+  width: 60px;
+  height: 60px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed #555;
+  border-radius: 50%;
+  animation: rotateOrbit linear infinite;
+}
+
+.mercury {
+  width: 150px;
+  height: 150px;
+  animation-duration: 5s;
+}
+
+.earth {
+  width: 250px;
+  height: 250px;
+  animation-duration: 10s;
+}
+
+.planet {
+  width: 20px;
+  height: 20px;
+  background: lightblue;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  cursor: pointer;
+}
+
+@keyframes rotateOrbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* INFO PANEL */
+#info {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  display: none;
+}

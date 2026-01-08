@@ -1,11 +1,37 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="space.css" />
 </head>
 <body>
-    
+
+<div id="scene">
+  <div id="galaxy">
+    <h1>Milky Way</h1>
+  </div>
+
+  <div id="solar-system">
+    <div class="sun"></div>
+
+    <div class="orbit mercury">
+      <div class="planet" data-name="Mercury"></div>
+    </div>
+
+    <div class="orbit earth">
+      <div class="planet" data-name="Earth"></div>
+    </div>
+  </div>
+</div>
+
+<div id="info">
+  <h2 id="planetName"></h2>
+  <p>This is a demo info panel.</p>
+</div>
+
+<script src="space.js"></script>
 </body>
 </html>
+
